@@ -23,6 +23,24 @@ export class ProfileCardComponent implements OnInit {
     following: 0
   }; 
 
+  @Input() scores: number[] = [    
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+  ]
+
+  @Input() score: number = 0;
+
+  @Input() winner: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -11,14 +11,25 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+
   async inspectUser(username = 'andrew') {
-    let data = await this.http.get(inspectUserUrl + username).toPromise();
+    let data;
+    try {
+      data = await this.http.get(inspectUserUrl + username).toPromise()
+    } catch (e: any) {
+      data = e.message;
+    }
     console.log(data);
     return data;
   }
 
   async duelUsers(user1 = 'fabpot', user2 = 'andrew') {
-    let data = await this.http.get(duelUsersUrl + `username=${user1}&username=${user2}`).toPromise();
+    let data;
+    try {
+      data = await this.http.get(duelUsersUrl + `username=${user1}&username=${user2}`).toPromise();
+    } catch (e: any) {
+      data = e.message;
+    }
     console.log(data);
     return data;
   }

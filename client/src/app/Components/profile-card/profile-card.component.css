@@ -1,7 +1,7 @@
 #box {
     font-family: Arial;
     margin-top: 40px;
-    width: 649px;
+    width: 700px;
     height: 468px;
     flex-shrink: 0;
     display: flex;
@@ -13,10 +13,9 @@
 
 #pic_with_caption {
     margin-top: 140px;
-    margin-left: 50px;
+    margin-left: 30px;
     width: 140px;
     height: 140px;
-    flex-shrink: 0;
     text-align: center;
 }
 
@@ -30,8 +29,9 @@ li {
 }
 
 #stat_list {
+    position:relative;
     margin-top: 0px;
-    margin-left: 15px;
+    margin-left: 0px;
     align-items: center;
     width: 600px;
     text-align: left;
@@ -57,4 +57,19 @@ li {
 .value {
     font-size: 15px;
     padding: 10px;
+    width: 180px;
+    white-space: nowrap;
+}
+
+#scoreTitle {
+    position: absolute;
+    margin-top: 12px;
+    left: 435px;
+    color: red
+}
+
+.scores {
+    position: absolute;
+    margin-top: 12px;
+    left: 460px;
 }

@@ -8,46 +8,57 @@
             <li>
                 <span class="label">username</span>
                 <span class="value">{{user.username}}</span>
+                <span *ngIf="winner !== undefined" id="scoreTitle">points ↓</span>
             </li>
             <li>
                 <span class="label">name</span>
                 <span class="value">{{user.name}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[0]}}</span>
             </li>            
             <li>
                 <span class="label">location</span>
                 <span class="value">{{user.location}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[1]}}</span>
             </li>
             <li>
                 <span class="label">titles</span>
                 <span class="value">{{user.titles}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[2]}}</span>
             </li>
             <li>
                 <span class="label">fav language</span>
                 <span class="value">{{user['favorite-language']}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[3]}}</span>
             </li>
             <li>
                 <span class="label">total stars</span>
                 <span class="value">{{user['total-stars']}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[4]}}</span>
             </li>
             <li>
                 <span class="label">highest star count</span>
                 <span class="value">{{user['highest-starred']}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[5]}}</span>
             </li>
             <li>
                 <span class="label">public repos</span>
                 <span class="value">{{user['public-repos']}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[6]}}</span>
             </li>
             <li>
                 <span class="label">perfect repos</span>
                 <span class="value">{{user['perfect-repos']}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[7]}}</span>
             </li>
             <li>
                 <span class="label">followers</span>
                 <span class="value">{{user.followers}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[8]}}</span>
             </li>
             <li>
                 <span class="label">following</span>
                 <span class="value">{{user.following}}</span>
+                <span *ngIf="winner !== undefined" class="scores">{{scores[9]}}</span>
             </li>
         </ul>
     </div>

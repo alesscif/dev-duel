@@ -14,9 +14,24 @@ border-radius: 15px;
   margin-top: 60px;
 }
 
-img {
-  position: absolute;
-  left: 200px;
+.resultbox {
+  display: inline-block;
+  position: relative;
+}
+
+.winnerbox {
+  text-align: center;
+  margin-bottom: -30px;
+}
+
+#drawbox {
+  text-align: center;
+  margin-bottom: -30px;
+}
+
+.text {
+  font-size: xx-large;
+  margin: 16px;
 }
 
 .user {

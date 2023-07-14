@@ -19,16 +19,28 @@
   <br />
   <button class="submit-button" (click)="onSubmit()">Duel</button>
   <div *ngIf="user1.username && user2.username" id="duel-box">
-    <div *ngIf="winner === 1" id="winner1" class="winnerbox">
-      <img src="/assets/flag.png" width="34" height="38" id="flag">
-      <span id="text">Winner!</span>
+    
+    <div *ngIf="winner === 0" id="drawbox">
+      <span class="text">Draw!</span>
     </div>
-    <div *ngIf="winner === 2" id="winnder2" class="winnerbox">
-      <img src="/assets/flag.png" width="34" height="38" id="flag">
-      <span id="text">Winner!</span>
+
+    <div class="resultbox">
+      <div *ngIf="winner === 1" class="winnerbox">
+        <img src="/assets/flag.png" width="34" height="38" id="flag1">
+        <span class="text">{{user1.username}} wins!</span>
+        <img src="/assets/flag.png" width="34" height="38" id="flag2">
+      </div>
+      <app-profile-card [user]="user1" class="user"></app-profile-card>
     </div>
-    <div *ngIf="winner === 0" id="draw" class="winnerbox">Draw!</div>
-    <app-profile-card [user]="user1" class="user"></app-profile-card>
-    <app-profile-card [user]="user2" class="user"></app-profile-card>
+
+    <div class="resultbox">
+      <div *ngIf="winner === 2" class="winnerbox">
+        <img src="/assets/flag.png" width="34" height="38" id="flag1">
+        <span class="text">{{user2.username}} wins!</span>
+        <img src="/assets/flag.png" width="34" height="38" id="flag2">
+      </div>
+      <app-profile-card [user]="user2" class="user"></app-profile-card>
+    </div>
+
   </div>
 </div>

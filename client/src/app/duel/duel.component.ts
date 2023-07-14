@@ -61,12 +61,12 @@ export class DuelComponent implements OnInit {
     if (user.location) score +=1;
     score += user.titles.length;
     if (user['favorite-language']) score +=1;
-    score += user['total-stars'] * 0.25;
-    score += user['highest-starred'] * 0.25;
-    score += user['public-repos'] * 0.1;
+    score += user['total-stars'] * 0.35;
+    score += user['highest-starred'] * 0.30;
+    score += user['public-repos'] * 0.2;
     score += user['perfect-repos'] * 0.1;
-    score += user.followers * 0.1;
-    score += user.following * 0.05;
+    score += user.followers * 0.04;
+    score += user.following * 0.02;
     return score;
   }
 
@@ -79,6 +79,8 @@ export class DuelComponent implements OnInit {
         this.winner = 2;
       }
       else this.winner = 1;
+      console.log('score1' + score1)
+      console.log('score2' + score2)
   }
 
   onSubmit() {

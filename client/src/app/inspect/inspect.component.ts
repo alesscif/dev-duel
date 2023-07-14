@@ -25,7 +25,7 @@ export class InspectComponent implements OnInit {
     following: 0
   }
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
   }
@@ -34,10 +34,21 @@ export class InspectComponent implements OnInit {
     this.username = valueEmitted;
   }
 
+  error: string = "";
+  ok: boolean = false;
+
   onSubmit() {
-    this.userService.inspectUser(this.username).then((response: any) => { 
-      this.user = response;
-    })
+      this.userService.inspectUser(this.username).then((response: any) => { 
+        if (!response.username) {
+          this.ok = false;
+          this.error = response;
+          console.log(response + "hihih");
+        }
+        else {
+          this.ok = true;
+          this.user = response;
+        }
+      })
   }
 
 }

@@ -1,0 +1,54 @@
+<div id="box">
+    <div id="pic_with_caption">
+        <img src={{user.avatar_url}} id="pic">
+        <span id="caption">{{user.bio}}</span>
+    </div>
+    <div id="stat_list">
+        <ul>
+            <li>
+                <span class="label">username</span>
+                <span class="value">{{user.username}}</span>
+            </li>
+            <li>
+                <span class="label">name</span>
+                <span class="value">{{user.name}}</span>
+            </li>            
+            <li>
+                <span class="label">location</span>
+                <span class="value">{{user.location}}</span>
+            </li>
+            <li>
+                <span class="label">titles</span>
+                <span class="value">{{user.titles}}</span>
+            </li>
+            <li>
+                <span class="label">fav language</span>
+                <span class="value">{{user['favorite-language']}}</span>
+            </li>
+            <li>
+                <span class="label">total stars</span>
+                <span class="value">{{user['total-stars']}}</span>
+            </li>
+            <li>
+                <span class="label">highest star count</span>
+                <span class="value">{{user['highest-starred']}}</span>
+            </li>
+            <li>
+                <span class="label">public repos</span>
+                <span class="value">{{user['public-repos']}}</span>
+            </li>
+            <li>
+                <span class="label">perfect repos</span>
+                <span class="value">{{user['perfect-repos']}}</span>
+            </li>
+            <li>
+                <span class="label">followers</span>
+                <span class="value">{{user.followers}}</span>
+            </li>
+            <li>
+                <span class="label">following</span>
+                <span class="value">{{user.following}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

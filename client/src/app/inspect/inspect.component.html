@@ -10,4 +10,5 @@
   <br />
   <br />
   <button class="submit-button" (click)="onSubmit()">Inspect</button>
+  <app-profile-card *ngIf="user.username" [user]="user"></app-profile-card>
 </div>
